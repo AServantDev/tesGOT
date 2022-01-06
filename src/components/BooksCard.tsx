@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Heading, Flex, Text, Spacer } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, Spacer, Link } from "@chakra-ui/react";
 interface Props {
   url: string;
   name: string;
@@ -19,7 +19,8 @@ export const BooksCard = ({ name, url, authors }: Props): JSX.Element => {
     >
       <Box p={4}>
         <Flex direction="column">
-          <Heading to={`/books/${name}`}>{name}</Heading>
+          <Link href={`/book/${name}`}>{name}</Link>
+          {/* <Heading to={`/book/${url}`}>{name}</Heading> */}
           <Spacer />
           <Text>of: {authors}</Text>
         </Flex>

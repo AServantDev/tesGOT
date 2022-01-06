@@ -6,6 +6,7 @@ import { BookProvider } from "./components/context/GOTContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Books } from "./components/Books";
+import { Book } from "./components/Book";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -32,6 +33,7 @@ const App = () => (
           <Router>
             <Routes>
               <Route path="/" element={<Books />} />
+              <Route path="book/:name" element={<Book />} />
             </Routes>
           </Router>
         </div>
